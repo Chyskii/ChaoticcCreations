@@ -3,49 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChaoticcCreations</title>
+    <title>Chaoticc Creations</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>ChaoticcCreations 🚀</h1>
+        <h1>Chaoticc Creations</h1>
         <nav>
             <ul>
-                <li><a href="#about">About Me</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#booking" class="btn">Book Now</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>🌟 About Me</h2>
-            <p>I specialize in <strong>graphic design, branding, UI/UX, and digital content creation</strong>. My passion lies in transforming ideas into visually striking designs.</p>
-        </section>
+    <section id="hero">
+        <h2>Welcome to Chaoticc Creations</h2>
+        <p>Where beauty meets creativity. Transform your style with our expert nail artistry, event styling, and design services.</p>
+        <a href="#booking" class="btn">Get Started</a>
+    </section>
 
-        <section id="portfolio">
-            <h2>🖥️ Portfolio (Coming Soon)</h2>
-            <p>I am currently building my <strong>portfolio website</strong> using:</p>
-            <ul>
-                <li><strong>GitHub</strong> for version control and deployment.</li>
-                <li><strong>AWS</strong> for scalable hosting solutions.</li>
-                <li><strong>Python & Jupyter Notebooks</strong> for dynamic content.</li>
-                <li><strong>Flask/FastAPI</strong> for interactive features.</li>
-            </ul>
-            <p>Stay tuned! 🎨✨</p>
-        </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            <div class="image-container"><img src="images/IMG_0481.jpeg" alt="Nail Art 1"></div>
+            <div class="image-container"><img src="images/IMG_1500.jpeg" alt="Nail Art 2"></div>
+            <div class="image-container"><img src="images/IMG_6853.jpeg" alt="Balloon Decor 1"></div>
+            <div class="image-container"><img src="images/IMG_6869.jpeg" alt="Balloon Decor 2"></div>
+            <div class="image-container"><img src="images/IMG-20230929-WA0001.jpg" alt="Creative Design 1"></div>
+            <div class="image-container"><img src="images/IMG-20230929-WA0002.jpg" alt="Creative Design 2"></div>
+            <div class="image-container"><img src="images/IMG-20230929-WA0003.jpg" alt="Creative Event Styling"></div>
+            <div class="image-container"><img src="images/IMG-20230929-WA0004.jpg" alt="Celebration Setup"></div>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>📩 Contact Me</h2>
-            <p>🔗 <a href="#" class="coming-soon">Portfolio Website</a> (Coming Soon)</p>
-            <p>📧 Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-            <p>📷 Instagram: <a href="https://instagram.com/chaoticc_creations" target="_blank">@chaoticc_creations</a></p>
-        </section>
-    </main>
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Nail Art & Design</li>
+            <li>Balloon Decorations</li>
+            <li>Event Styling</li>
+            <li>Custom Beauty Services</li>
+        </ul>
+    </section>
+
+    <section id="booking">
+        <h2>Book an Appointment</h2>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="service">Select Service:</label>
+            <select id="service">
+                <option>Nail Art</option>
+                <option>Balloon Decorations</option>
+                <option>Event Styling</option>
+            </select>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
 
     <footer>
-        <p>🚀 *Work in Progress. Updates coming soon!* </p>
+        <p>&copy; 2024 Chaoticc Creations. All rights reserved.</p>
+        <a href="https://www.instagram.com/chaoticcbeauty">Instagram</a>
+        <a href="mailto:contact@chaoticccreations.com">Email Us</a>
     </footer>
 </body>
 </html>
