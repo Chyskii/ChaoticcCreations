@@ -1,152 +1,65 @@
-/* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
-
-/* Root Variables */
-:root {
-    --primary-bg: #FFD6FF;
-    --secondary-bg: #E7C6FF;
-    --accent-1: #C8B6FF;
-    --accent-2: #B8C0FF;
-    --text-color: #4a4a4a;
-    --heading-font: 'Playfair Display', serif;
-    --body-font: 'Poppins', sans-serif;
-}
-
-/* General Styles */
-body {
-    background: var(--primary-bg);
-    color: var(--text-color);
-    font-family: var(--body-font);
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: background 0.3s ease-in-out;
 }
 
-/* Header */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
 header {
-    background: var(--accent-1);
+    background-color: #ff6f61;
     color: white;
-    text-align: center;
     padding: 20px;
-    font-family: var(--heading-font);
-    font-size: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+    text-align: center;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    list-style-type: none;
 }
 
-nav ul li a {
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
     text-decoration: none;
-    color: white;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: var(--secondary-bg);
+main {
+    padding: 20px;
 }
 
-/* Portfolio Section */
-#portfolio {
-    text-align: center;
-    padding: 40px 20px;
-    background: var(--secondary-bg);
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 80%;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease-in-out;
-}
-
-.gallery img {
-    width: 200px;
-    height: auto;
-    border-radius: 12px;
-    margin: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Services Section */
-#services {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-#services ul li {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    transition: color 0.3s ease-in-out;
-}
-
-#services ul li:hover {
-    color: var(--accent-1);
-}
-
-/* Booking Form */
-#booking {
-    text-align: center;
-    padding: 40px 20px;
-    background: var(--accent-2);
-    border-radius: 12px;
-    margin: 20px auto;
-    max-width: 60%;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    transition: all 0.3s ease-in-out;
-}
-
-input, select, textarea {
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px;
-    border: 1px solid #ccc;
+section {
+    margin: 20px 0;
+    background: white;
+    padding: 20px;
     border-radius: 8px;
-    transition: border 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-input:focus, select:focus, textarea:focus {
-    border: 2px solid var(--accent-1);
+h2 {
+    color: #ff6f61;
 }
 
-button {
-    background: var(--accent-1);
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+.coming-soon {
+    color: #ff6f61;
+    font-weight: bold;
 }
 
-button:hover {
-    background: var(--secondary-bg);
-    transform: scale(1.05);
-}
-
-/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background: var(--accent-1);
+    padding: 10px;
+    background-color: #ff6f61;
     color: white;
-    font-size: 0.9rem;
-    transition: background 0.3s ease-in-out;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
