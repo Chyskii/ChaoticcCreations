@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaoticc Creations</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Welcome to Chaoticc Creations!</h1>
-    <p>More content coming soon.</p>
+    <header>
+        <h1>Chaoticc Creations</h1>
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#booking">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            <img src="images/nails1.jpg" alt="Nail Art 1">
+            <img src="images/nails2.jpg" alt="Nail Art 2">
+            <img src="images/balloons1.jpg" alt="Balloon Decor 1">
+            <img src="images/balloons2.jpg" alt="Balloon Decor 2">
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Nail Art & Design</li>
+            <li>Balloon Decorations</li>
+            <li>Event Styling</li>
+            <li>Custom Beauty Services</li>
+        </ul>
+    </section>
+
+    <section id="booking">
+        <h2>Book an Appointment</h2>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="service">Select Service:</label>
+            <select id="service">
+                <option>Nail Art</option>
+                <option>Balloon Decorations</option>
+                <option>Event Styling</option>
+            </select>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Chaoticc Creations. All rights reserved.</p>
+        <a href="https://www.instagram.com/chaoticcbeauty">Instagram</a>
+        <a href="mailto:contact@chaoticccreations.com">Email Us</a>
+    </footer>
 </body>
 </html>
