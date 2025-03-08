@@ -6,6 +6,7 @@
     <title>Chaoticc Creations</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -15,18 +16,24 @@
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#booking" class="btn">Book Now</a></li>
             </ul>
         </nav>
     </header>
 
+    <section id="hero">
+        <h2>Welcome to Chaoticc Creations</h2>
+        <p>Where beauty meets creativity. Transform your style with our expert nail artistry, event styling, and design services.</p>
+        <a href="#booking" class="btn">Get Started</a>
+    </section>
+
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="gallery">
-            <div class="gallery-item"><img src="images/nails1.jpg" alt="Nail Art 1"></div>
-            <div class="gallery-item"><img src="images/nails2.jpg" alt="Nail Art 2"></div>
-            <div class="gallery-item"><img src="images/balloons1.jpg" alt="Balloon Decor 1"></div>
-            <div class="gallery-item"><img src="images/balloons2.jpg" alt="Balloon Decor 2"></div>
+            <div class="image-container"><img src="images/nails1.jpg" alt="Nail Art 1"></div>
+            <div class="image-container"><img src="images/nails2.jpg" alt="Nail Art 2"></div>
+            <div class="image-container"><img src="images/balloons1.jpg" alt="Balloon Decor 1"></div>
+            <div class="image-container"><img src="images/balloons2.jpg" alt="Balloon Decor 2"></div>
         </div>
     </section>
 
@@ -59,18 +66,8 @@
             <label for="message">Message:</label>
             <textarea id="message" required></textarea>
             
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn">Submit</button>
         </form>
-    </section>
-
-    <section id="newsletter">
-        <h2>Subscribe for Updates & Free Planner</h2>
-        <p>Sign up for our newsletter and get access to exclusive content and yearly planners!</p>
-        <form id="newsletter-form">
-            <input type="email" id="newsletter-email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe & Download</button>
-        </form>
-        <p id="download-link" style="display:none;"><a href="planner.pdf" download>Download Your 2025 Planner</a></p>
     </section>
 
     <footer>
@@ -80,3 +77,4 @@
     </footer>
 </body>
 </html>
+
