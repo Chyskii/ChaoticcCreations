@@ -1,88 +1,86 @@
-/* General Styling */
+/* Lilac Theme */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    background-color: #E6D6FF; /* Soft lilac */
+    color: #4A235A; /* Deep purple */
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
+/* Header Styling */
 header {
-    background-color: #222;
+    background-color: #4A235A; /* Deep lilac */
     color: white;
     padding: 20px;
+    text-align: center;
+    font-size: 24px;
 }
 
+/* Navigation Bar */
 nav ul {
-    list-style: none;
-    padding: 0;
+    background-color: #6A0DAD; /* Darker purple */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    font-weight: bold;
 }
 
-/* Portfolio Section */
+/* Portfolio Gallery */
 .gallery {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.gallery img {
-    width: 250px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.gallery-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px solid #4A235A;
 }
 
-/* Services Section */
-#services ul {
-    list-style: none;
-    font-size: 18px;
-    padding: 10px;
-}
-
-/* Booking Form */
-#booking-form {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-#booking-form input, select, textarea, button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-}
-
+/* Buttons */
 button {
-    background-color: #222;
+    background-color: #6A0DAD; /* Lilac buttons */
     color: white;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #444;
+    background-color: #4A235A;
+}
+
+/* Forms */
+form {
+    background: white;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
 footer {
     margin-top: 20px;
-    padding: 20px;
-    background: #222;
+    background-color: #4A235A;
     color: white;
+    padding: 10px;
+    font-size: 14px;
 }
+
