@@ -20,6 +20,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#policies">Policies</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -34,11 +36,57 @@
         </div>
     </section>
 
+    <!-- Portfolio Gallery -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>My Work</h2>
+            <div class="gallery">
+                <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/image1.jpg" alt="Project 1">
+                <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/image2.jpg" alt="Project 2">
+                <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/image3.jpg" alt="Project 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="container">
+            <h2>Pricing</h2>
+            <p>Explore my services and their pricing.</p>
+            <ul>
+                <li>Refill (Same Color) - CA$50.00</li>
+                <li>Removal (Soak-off) - CA$20.00</li>
+                <li>$100 Freestyle Promo - CA$100.00</li>
+                <li>Client Freestyle (Short-Med) - CA$60.00</li>
+                <li>Client Freestyle (Med-Long) - CA$70.00</li>
+                <li>Acrylic Overlay - CA$45.00</li>
+                <li>Short Acrylic Set - CA$60.00</li>
+                <li>Medium Acrylic Set - CA$70.00</li>
+                <li>Long Acrylic Set - CA$80.00</li>
+                <li>XL Acrylic Set - CA$100.00</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Policies Section -->
+    <section id="policies">
+        <div class="container">
+            <h2>Booking Policies</h2>
+            <p>To ensure a smooth experience, please review my policies:</p>
+            <ul>
+                <li>💰 Payments: Remaining balance must be paid in cash. E-transfers are taxed 13% HST.</li>
+                <li>⏳ Late Arrivals: 15-minute grace period before deposit is forfeited.</li>
+                <li>🚫 Cancellations: Appointments canceled if arrival is over 30 minutes late.</li>
+                <li>🔄 Rescheduling: One reschedule allowed within 72 hours of appointment.</li>
+            </ul>
+        </div>
+    </section>
+
     <!-- Booking Form -->
     <section id="booking">
         <div class="container">
             <h2>Book a Service</h2>
-            <form id="booking-form" action="https://formsubmit.co/YOUR-EMAIL@example.com" method="POST">
+            <form id="booking-form" action="https://formsubmit.co/chaoticccreations@outlook.com" method="POST">
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
                 <select id="service" name="service" required>
@@ -53,32 +101,26 @@
         </div>
     </section>
 
+    <!-- Newsletter Signup -->
+    <section id="newsletter">
+        <div class="container">
+            <h2>Subscribe to My Newsletter</h2>
+            <p>Sign up to receive updates, exclusive content, and a FREE 2025 planner!</p>
+            <form id="newsletter-form" action="https://formsubmit.co/chaoticccreations@outlook.com" method="POST">
+                <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe & Download</button>
+            </form>
+            <p>Once you subscribe, you'll receive a link to download the 2025 planner.</p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <p>🚀 Powered by Chaoticc Creations | All Rights Reserved © 2025</p>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("booking-form").addEventListener("submit", function(event) {
-                event.preventDefault();
-                
-                let name = document.getElementById("name").value;
-                let email = document.getElementById("email").value;
-                let service = document.getElementById("service").value;
-                let message = document.getElementById("message").value;
-                
-                if(name && email && service && message) {
-                    alert("Thank you, " + name + "! Your booking request has been submitted.");
-                    document.getElementById("booking-form").reset();
-                } else {
-                    alert("Please fill out all fields before submitting.");
-                }
-            });
-        });
-    </script>
 </body>
 </html>
+
 
