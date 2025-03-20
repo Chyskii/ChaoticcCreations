@@ -1,226 +1,196 @@
-/* Color Variables for convenience */
-:root {
-  --lilac: #c8a2c8;         /* primary lilac */
-  --lilac-light: #e8d7ee;   /* lighter lilac for backgrounds */
-  --pastel-pink: #f3c6f5;
-  --pastel-blue: #c6e7f3;
-  --text-color: #333;       /* dark text for contrast on light backgrounds */
-  --white: #ffffff;
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Global Styles */
+/* Body - Futuristic Dark Theme */
 body {
-  margin: 0;
-  font-family: Verdana, sans-serif;  /* clean sans-serif for body text */
-  color: var(--text-color);
-  background: var(--white);  /* overall background white or very light pastel */
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: #fff;
+    text-align: center;
 }
 
-/* Headings and special text */
-.site-title {
-  font-family: "Brush Script MT", cursive;  /* playful script font */
-  font-size: 3em;
-  color: var(--lilac);
-  text-shadow: 0 0 10px var(--lilac);  /* glowing lilac text shadow */
-  margin: 0.2em 0;
-}
-.tagline {
-  font-family: Verdana, sans-serif;
-  font-size: 1.2em;
-  color: #555;
-  margin-bottom: 1em;
+/* Navigation */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Navigation Bar */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--lilac-light);
-  padding: 0.5em 1em;
-  /* A slight translucent effect for nostalgia */
-  backdrop-filter: blur(5px);
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
-.navbar .logo {
-  font-family: "Brush Script MT", cursive;
-  font-size: 1.8em;
-  color: var(--lilac);
+
+nav a {
+    color: #00c2ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
-/* Nav links list */
-.navbar ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-.navbar ul li {
-  margin: 0 1em;
-}
-.navbar ul li a {
-  text-decoration: none;
-  font-weight: bold;
-  color: var(--text-color);
-  /* Add a bottom border that will serve as hover underline */
-  position: relative;
-}
-.navbar ul li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0%;
-  height: 2px;
-  background: var(--lilac);
-  transition: width 0.3s ease;
-}
-.navbar ul li a:hover::after {
-  width: 100%;  /* animate underline on hover */
-}
-.navbar ul li a:hover {
-  color: var(--lilac);
-  /* Optionally, make text glow on hover */
-  text-shadow: 0 0 5px var(--lilac);
+
+nav a:hover {
+    color: #ffefb8;
 }
 
 /* Hero Section */
-.hero {
-  text-align: center;
-  padding: 4em 1em;
-  position: relative;  /* for sparkles absolute positioning */
-  /* Soft glowing background gradient */
-  background: radial-gradient(circle at top, #ffffff 20%, var(--lilac-light) 100%);
-  /* You can adjust the gradient to include other pastel colors */
-}
-/* Optional animated background (subtle) */
-/* .hero {
-     background: linear-gradient(45deg, var(--lilac-light), var(--pastel-pink), var(--pastel-blue));
-     background-size: 300% 300%;
-     animation: gradientShift 20s infinite alternate;
-} 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-} */
-
-/* Info Section (Location/Hours/Contact) */
-.info-section {
-  padding: 2em 1em;
-  text-align: center;
-  background: var(--lilac-light);
-}
-.info-section h2 {
-  font-family: "Brush Script MT", cursive;
-  font-size: 2em;
-  color: var(--lilac);
-  margin-bottom: 0.5em;
-}
-/* Container for info boxes */
-.info-container {
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  flex-wrap: wrap;  /* allow wrapping on smaller screens */
-}
-/* Individual info boxes */
-.info-box {
-  background: var(--white);
-  border: 2px solid var(--lilac-light);
-  border-radius: 8px;
-  padding: 1em;
-  min-width: 150px;
-  /* light glow effect */
-  box-shadow: 0 0 10px rgba(200,162,200, 0.3);
-}
-.info-box h3 {
-  font-family: Verdana, sans-serif;
-  font-size: 1.1em;
-  color: var(--lilac);
-  margin-top: 0;
-}
-.info-box p {
-  font-size: 0.95em;
-  line-height: 1.4em;
-}
-
-/* Footer Social Media */
-footer {
-  background: var(--lilac-light);
-  padding: 1em;
-  text-align: center;
-}
-.social-media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5em;
-}
-.social-media span {
-  font-size: 0.95em;
-  color: #555;
-  margin-right: 0.5em;
-}
-.social-icon img {
-  width: 24px;
-  height: 24px;
-  filter: drop-shadow(0 0 3px rgba(0,0,0,0.2));
-  transition: transform 0.3s, filter 0.3s;
-}
-.social-icon img:hover {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 8px var(--lilac));
-}
-
-/* --- Hover and Transition Effects --- */
-/* Smooth transitions for interactive elements */
-a, .info-box {
-  transition: 0.3s ease all;
-}
-.info-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(200,162,200, 0.5);  /* intensify glow on hover */
-}
-
-/* --- Sparkle Animation (gentle sparkles in hero) --- */
-.hero::after {
-  content: "✧";  /* sparkle character, you can use a star unicode or image */
-  position: absolute;
-  font-size: 2rem;
-  color: #fff;
-  top: 20%;
-  left: 50%;
-  opacity: 0;
-  text-shadow: 0 0 8px #fff;
-  animation: sparkle 3s infinite ease-in-out;
-}
-@keyframes sparkle {
-  0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
-  50% { opacity: 1; transform: scale(1) rotate(20deg); }
-}
-/* (For multiple sparkles, you could add more pseudo-elements or additional absolutely positioned spans and vary their animations) */
-
-/* --- Responsive Design --- */
-/* Small screens: stack nav and info boxes vertically */
-@media (max-width: 600px) {
-  .navbar {
-    flex-wrap: wrap;
-  }
-  .navbar .logo {
-    flex: 1 1 100%;
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 0.5em;
-  }
-  .navbar ul {
-    flex: 1 1 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-  .navbar ul li {
-    margin: 0.5em 0;
-  }
-  .info-container {
-    flex-direction: column;
-    align-items: center;
-  }
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    overflow: hidden;
 }
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 30, 48, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+.hero-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    z-index: 1;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 10px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.08);
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 50px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.pricing-item:hover {
+    transform: scale(1.05);
+}
+
+.pricing-item img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.neon-glow {
+    background: linear-gradient(90deg, #00c2ff, #a36ae0);
+    color: white;
+    box-shadow: 0px 0px 15px #00c2ff;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.neon-glow:hover {
+    box-shadow: 0px 0px 25px #a36ae0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.fade-in {
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.pulse {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .portfolio-grid, .pricing-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .portfolio-grid, .pricing-grid {
+        padding: 50px 20px;
+    }
+}
+
 
 
