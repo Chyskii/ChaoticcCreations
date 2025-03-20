@@ -1,27 +1,49 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Smooth Scrolling for Navigation Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: "smooth"
-            });
+document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
-    // Animate Buttons on Hover
+    // Image resizing to ensure proper layout
+    document.querySelectorAll('.portfolio-item img, .pricing-item img').forEach(img => {
+        img.style.objectFit = 'cover';
+        img.style.maxWidth = '100%';
+        img.style.height = 'auto';
+    });
+
+    // Glow effect on hover for buttons
     document.querySelectorAll('.btn').forEach(button => {
-        button.addEventListener("mouseenter", () => {
-            button.classList.add("pulse");
+        button.addEventListener('mouseover', function() {
+            this.style.boxShadow = '0px 0px 20px #ff69b4';
         });
-
-        button.addEventListener("mouseleave", () => {
-            button.classList.remove("pulse");
+        button.addEventListener('mouseout', function() {
+            this.style.boxShadow = '0px 0px 15px #ff69b4';
         });
     });
 
-    // Lazy Loading for Images
-    document.querySelectorAll("img").forEach(img => {
-        img.loading = "lazy";
+    // Booking form validation
+    document.getElementById("booking-form")?.addEventListener("submit", function(event) {
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let service = document.getElementById("service").value;
+        let message = document.getElementById("message").value;
+        
+        if(name && email && service && message) {
+            alert("Thank you, " + name + "! Your booking request has been submitted.");
+            document.getElementById("booking-form").reset();
+        } else {
+            alert("Please fill out all fields before submitting.");
+        }
     });
 });
