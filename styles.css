@@ -6,16 +6,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Body - Modern Y2K Aesthetic */
+/* Body Styling */
 body {
-    background: linear-gradient(to right, #f3c6f5, #c6e7f3);
+    background: linear-gradient(to right, #e6c9ff, #d1a3ff);
     color: #333;
     text-align: center;
 }
 
 /* Navigation */
-header {
-    background: rgba(255, 255, 255, 0.9);
+.navbar {
+    background: rgba(255, 255, 255, 0.2);
     padding: 15px;
     position: fixed;
     width: 100%;
@@ -23,56 +23,26 @@ header {
     z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
+.navbar ul {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-nav a {
-    color: #ff69b4;
+.navbar a {
+    color: #000;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
 }
 
-nav a:hover {
-    color: #c71585;
+.navbar a:hover {
+    color: #6a0dad;
 }
 
 /* Hero Section */
-#hero {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.hero-background {
     text-align: center;
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    overflow: hidden;
-}
-
-.hero-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-}
-
-.hero-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
-    z-index: 1;
-    animation: fadeInUp 1.2s ease-in-out;
-}
-
-.hero-subtitle {
-    font-size: 1.2rem;
-    opacity: 0.8;
-    margin-bottom: 20px;
-    animation: fadeInUp 1.4s ease-in-out;
+    padding: 60px 10px;
 }
 
 /* Portfolio Grid */
@@ -80,41 +50,21 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 50px 10px;
 }
 
 .portfolio-item img {
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     height: auto;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
 }
 
-.portfolio-item img:hover {
-    transform: scale(1.08);
-}
-
-/* Pricing Grid */
+/* Pricing */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    padding: 50px 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-.pricing-item {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.pricing-item:hover {
-    transform: scale(1.05);
+    padding: 30px;
 }
 
 .pricing-item img {
@@ -122,71 +72,11 @@ nav a:hover {
     max-width: 250px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.3);
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.neon-glow {
-    background: linear-gradient(90deg, #ff69b4, #c71585);
-    color: white;
-    box-shadow: 0px 0px 15px #ff69b4;
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.neon-glow:hover {
-    box-shadow: 0px 0px 25px #c71585;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-.fade-in {
-    animation: fadeInUp 1s ease-in-out forwards;
-}
-
-.pulse {
-    animation: pulse 1s ease-in-out infinite;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .portfolio-grid, .pricing-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .portfolio-grid, .pricing-grid {
-        padding: 50px 20px;
-    }
+/* Booking Form */
+iframe {
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
 }
