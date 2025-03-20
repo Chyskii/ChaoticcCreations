@@ -1,121 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chaoticc Creations - Elevate Your Brand with Stunning Designs. Offering Graphic Design, UI/UX, Custom Art, and Event Services.">
-    <meta name="keywords" content="Graphic Design, Branding, UI/UX, Custom Art, Web Design, Event Planning, Aesthetics">
-    <meta name="author" content="Chaoticc Creations">
-    <title>Chaoticc Creations | Bold, Modern, & Unique Designs</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script defer src="assets/js/script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Y2K Aesthetic Site</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Header with Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Chaoticc Creations 🚀</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#policies">Policies</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#booking">Book Now</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-background">
-        <div class="hero-overlay">
-            <h1 class="hero-title">Chaoticc Creations 🚀</h1>
-            <p class="hero-subtitle">Bold. Modern. Uniquely Yours.</p>
-            <a href="#portfolio" class="btn primary-btn">Explore My Work</a>
-        </div>
-    </section>
+  <!-- Header with Navigation -->
+  <header>
+    <nav class="navbar">
+      <!-- Logo (could be an image or text) -->
+      <div class="logo">MyY2KSite</div>
+      <!-- Navigation Links -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Portfolio Gallery -->
-    <section id="portfolio">
-        <div class="container">
-            <h2>My Work</h2>
-            <div class="gallery">
-                <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/image1.jpg" alt="Project 1">
-                <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/image2.jpg" alt="Project 2">
-                <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/image3.jpg" alt="Project 3">
-            </div>
-        </div>
-    </section>
+  <!-- Hero Section with logo/tagline -->
+  <section class="hero">
+    <h1 class="site-title">MyY2KSite</h1>
+    <p class="tagline">The future is retro-fabulous</p>
+    <!-- (Optional: call-to-action button could go here) -->
+  </section>
 
-    <!-- Booking Form Section -->
-    <section id="booking">
-        <div class="container">
-            <h2>Book an Appointment</h2>
-            <p>Use the form below to book your service:</p>
-            <iframe src="https://forms.gle/jfQQofJbRpwAxxpm7" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
+  <!-- Info Section: Location, Hours, Contact -->
+  <section class="info-section">
+    <h2>Visit Us</h2>
+    <div class="info-container"><!-- flex container for info boxes -->
+      <div class="info-box location">
+        <h3>Our Location</h3>
+        <p>123 Nostalgia Ave<br>Web City, 2000</p>
+      </div>
+      <div class="info-box hours">
+        <h3>Hours</h3>
+        <p>Mon-Fri: 9am – 9pm<br>Sat-Sun: 10am – 6pm</p>
+      </div>
+      <div class="info-box contact">
+        <h3>Contact</h3>
+        <p>📞 123-456-7890<br>✉️ hello@myy2ksite.com</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing">
-        <div class="container">
-            <h2>Pricing</h2>
-            <div class="pricing-grid">
-                <div class="pricing-item">
-                    <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/refill.jpg" alt="Refill">
-                    <h3>Refill (Same Color)</h3>
-                    <p>2 hours | CA$50.00</p>
-                </div>
-                <div class="pricing-item">
-                    <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/removal.jpg" alt="Removal">
-                    <h3>Removal (Soak-off)</h3>
-                    <p>40 minutes | CA$20.00</p>
-                </div>
-                <div class="pricing-item">
-                    <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/freestyle.jpg" alt="Freestyle">
-                    <h3>$100 Freestyle Promo</h3>
-                    <p>2 hours | CA$100.00</p>
-                </div>
-                <div class="pricing-item">
-                    <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/short.jpg" alt="Short Acrylic Set">
-                    <h3>Short Acrylic Set</h3>
-                    <p>2 hours | CA$60.00</p>
-                </div>
-                <div class="pricing-item">
-                    <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/medium.jpg" alt="Medium Acrylic Set">
-                    <h3>Medium Acrylic Set</h3>
-                    <p>2 hours | CA$70.00</p>
-                </div>
-                <div class="pricing-item">
-                    <img src="https://raw.githubusercontent.com/Chyskii/ChaoticcCreations/Chyskii-IMAGES/long.jpg" alt="Long Acrylic Set">
-                    <h3>Long Acrylic Set</h3>
-                    <p>2 hours | CA$80.00</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Footer with Social Media Icons -->
+  <footer>
+    <div class="social-media">
+      <span>Follow us:</span>
+      <a href="#" class="social-icon"><img src="icon-facebook.png" alt="Facebook"></a>
+      <a href="#" class="social-icon"><img src="icon-twitter.png" alt="Twitter"></a>
+      <a href="#" class="social-icon"><img src="icon-instagram.png" alt="Instagram"></a>
+    </div>
+  </footer>
 
-    <!-- Policies Section -->
-    <section id="policies">
-        <div class="container">
-            <h2>Booking Policies</h2>
-            <p>To ensure a smooth experience, please review my policies:</p>
-            <ul>
-                <li>💰 Payments: Remaining balance must be paid in cash. E-transfers are taxed 13% HST.</li>
-                <li>⏳ Late Arrivals: 15-minute grace period before deposit is forfeited.</li>
-                <li>🚫 Cancellations: Appointments canceled if arrival is over 30 minutes late.</li>
-                <li>🔄 Rescheduling: One reschedule allowed within 72 hours of appointment.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>🚀 Powered by Chaoticc Creations | All Rights Reserved © 2025</p>
-        </div>
-    </footer>
 </body>
 </html>
+
